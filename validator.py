@@ -1,6 +1,8 @@
 # Hashtags Validator
+import keyboard
+import datetime
 
-print("Press 1 to create a list")
+# f = open("myfile.txt", "x")
 
 def hashtagsValidator():
     hashtagCollection = []
@@ -15,5 +17,5 @@ def hashtagsValidator():
             hashtagCollection.append(hashtagInput)
             print(hashtagCollection)
             print("To Stop Entering, Press Ctrl + C")
-
+            
 hashtagsValidator()
