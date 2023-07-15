@@ -2,6 +2,7 @@
 import keyboard
 import datetime
 
+
 # f = open("myfile.txt", "x")
 
 def hashtagsValidator():
@@ -17,5 +18,10 @@ def hashtagsValidator():
             hashtagCollection.append(hashtagInput)
             print(hashtagCollection)
             print("To Stop Entering, Press Ctrl + C")
-            
+  
+        dt = datetime.datetime.now().strftime("%Y_%m_%H")
+        f = open(f"hashtagsList.txt-{dt}", "a")
+        f.write(" ".join(hashtagCollection) + "\n")
+
+   
 hashtagsValidator()
