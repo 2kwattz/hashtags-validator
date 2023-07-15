@@ -4,9 +4,8 @@ import datetime
 
 
 # f = open("myfile.txt", "x")
-
+hashtagCollection = []
 def hashtagsValidator():
-    hashtagCollection = []
 
     while True:
         print("Enter Hashtags")
@@ -18,10 +17,9 @@ def hashtagsValidator():
             hashtagCollection.append(hashtagInput)
             print(hashtagCollection)
             print("To Stop Entering, Press Ctrl + C")
-  
-        dt = datetime.datetime.now().strftime("%Y_%m_%H")
-        f = open(f"hashtagsList.txt-{dt}", "a")
-        f.write(" ".join(hashtagCollection) + "\n")
+            dt = datetime.datetime.now().strftime("%Y_%m_%H")
+            f = open(f"hashtagsList.txt-{dt}", "a")
+            f.write(hashtagInput + "\n")
+            f.close()
 
-   
 hashtagsValidator()
